@@ -1,5 +1,5 @@
 #!/bin/bash
 
-/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell dumpsys package com.google.android.art | grep Version
-/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell dumpsys package com.android.vending | grep Version
-/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell getprop | grep security_patch
+/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell  getprop ro.build.version.sdk
+/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell ls /system/lib/ | grep libandroid_runtime.so 
+/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell ls /system/lib64/ | grep libandroid_runtime.so 
