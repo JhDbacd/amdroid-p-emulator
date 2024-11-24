@@ -23,3 +23,8 @@ jobs:
           arch: x86_64
           target: google_apis_playstore
           script: bash test.sh
+      - name: Upload the file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: screen.png
+          path: ./screen.png
